@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <Button
+        android:id="@+id/buttonBackToHomeSupplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"/>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search for items..."
+        app:iconifiedByDefault="false"/>
+
+
+    <TextView
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Locations:"
+        android:textSize="15dp"
+        />
+
+    <HorizontalScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+            app:selectionRequired="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:singleSelection="true"
+            app:layout_constraintTop_toBottomOf="@id/loc">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/allLocations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Locations"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="allpostsTapped"
+                app:chipSpacing= "20dp"
+                tools:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonAnywhere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anywhere"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="anywhereTapped"
+                app:chipSpacing="8dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonEastpointMall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eastpoint Mall"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="eastpointTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonTampinesMall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TampinesMall"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="tampinesTapped"
+                android:padding="10dp"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonCCP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CCP"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="CCPTapped"
+                android:padding="10dp"/>
+
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories:"
+        android:textSize="15dp"/>
+
+    <HorizontalScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+            app:selectionRequired="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:singleSelection="true">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonAllposts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:text="All Posts"
+                android:onClick="allcatTapped"
+                android:padding="10dp"
+
+                tools:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="othersTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="foodTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonBeverages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beverages"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="beveragesTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonStationery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stationery and Books"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="stationeryTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonElectronics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electronics"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="electronicsTapped"
+                android:padding="10dp"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonToiletries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toiletries"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="toiletriesTapped"
+                android:padding="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buttonhealthcare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Healthcare"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:background="@drawable/chip_background"
+                android:onClick="healthcareTapped"
+                android:padding="10dp"/>
+
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

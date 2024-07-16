@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="50dp"
+    android:paddingVertical="100dp">
+
+    <Button
+        android:id="@+id/buttonBackToRequestDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/Report_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/baseline_flag_24"
+        android:drawablePadding="10dp"
+        android:text="Report "
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBackToRequestDetails"
+        />
+
+    <EditText
+        android:id="@+id/Reporting_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Telegram Handle"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/Report_heading"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/Reason_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/Reporting_ID" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:chipSpacing="8dp"
+        app:singleSelection="false"
+        app:selectionRequired="false"
+        app:layout_constraintTop_toBottomOf="@id/Reason_text">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_late"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:background="@drawable/chip_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Late" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_no_show"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:background="@drawable/chip_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Show" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_payment_amount"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:background="@drawable/chip_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Amount"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_wrong_item"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:background="@drawable/chip_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrong Item"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_others"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:background="@drawable/chip_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <EditText
+        android:id="@+id/Other_Reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:hint="Enter Details For Others"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Other_Reason" />
+
+    <EditText
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reason For Reporting"
+        app:layout_constraintTop_toBottomOf="@id/description" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/description_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <style name="ReqAppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/primary</item>
+        <item name="android:colorControlNormal">@color/primary</item>
+    </style>
+    <style name="SupAppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/sprimary</item>
+        <item name="colorOnPrimary">@color/sprimary</item>
+        <item name="android:colorControlNormal">@color/sprimary</item>
+    </style>
+    <style name="NeutralAppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorOnPrimary">@color/brown</item>
+        <item name="android:colorControlNormal">@color/brown</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorAccent">@color/brown</item>
+    </style>
+</resources>

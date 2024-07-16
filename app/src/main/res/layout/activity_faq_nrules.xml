@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/faqTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frequently Asked Questions"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/brown"
+        android:textColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_below="@id/faqTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Profile"
+                android:textColor="@color/brown"
+                android:textSize="15dp"
+                android:id="@+id/buttonBackToProfile"
+                android:background="#00FFFFFF"
+                android:paddingTop="15dp"
+                android:drawableLeft="@drawable/baseline_arrow_back_ios_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How do I reset my password?"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="To reset your password, go to the Profile page and click on the Change Password.  Follow the instructions to reset your password."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How can I track my order?"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="You can see the status of your order on your Home Page. If you want more information you can actually find the telegram handle of the supplier by clicking on your order to see more information."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How do I contact customer support?"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/telegramLinkTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Our Customer Servie can be access by clicking on Telegram:@Admin123"
+                android:autoLink="web"
+                android:clickable="true"
+                android:onClick="onTelegramLinkClicked"/>
+
+            <TextView
+                android:id="@+id/rulesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rules"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/brown"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/payment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Upon meeting up Couriers please ensure that that you have proof of purchase ,Receipt, and the Requester please pay the amount shown on the receipt and an Additional $1.50 For Delivery Fee!" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/reportContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Please don't abuse the report system our admins will check properly and ask for proof (e.g screenshots,pictures)If caught abusing you will be banned! "/>
+
+            <TextView
+                android:padding="16dp"
+                android:id="@+id/report_points"
+                android:text="blah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"/>
+
+
+
+
+
+            <!-- Add more questions and answers as needed -->
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

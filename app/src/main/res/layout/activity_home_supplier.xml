@@ -1,0 +1,110 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="185sp"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/background_supplier" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back, Supplier"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/brown"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_account_circle_24"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imageView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonToRequestor"
+        app:backgroundTint="@null"
+        android:layout_width="150dp"
+        android:background="@drawable/supplierbutton"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        android:text="To Requestor"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:text="View History"
+        android:layout_below="@+id/buttonToRequestor"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/brown"
+        android:textColor="@color/white"
+        android:layout_alignRight="@+id/buttonToRequestor"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/brown"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/number"
+        android:text=" Tasks:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/brown" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonHistory"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/bottomNavViewSupplier"
+        android:layout_marginBottom="20dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavViewSupplier"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_supplier_nav_menu" />
+
+</RelativeLayout>

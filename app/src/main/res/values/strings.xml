@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CAMPUS COURIER</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string-array name="locations">
+        <item>Anywhere</item>
+        <item>Changi City Point</item>
+        <item>Eastpoint Mall</item>
+        <item>Tampines Mall</item>
+    </string-array>
+    <string-array name="urgency">
+        <item>Not Urgent</item>
+        <item>Urgent</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Others</item>
+        <item>Food</item>
+        <item>Beverages</item>
+        <item>Stationery and Books</item>
+        <item>Electronics</item>
+        <item>Toiletries</item>
+        <item>Healthcare</item>
+    </string-array>
+</resources>

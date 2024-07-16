@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DemeritPoints">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:id="@+id/buttonBackToProfile" />
+
+    <ProgressBar
+        android:id="@+id/progressBarContainer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:paddingHorizontal="40dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_container" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:paddingHorizontal="40dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+
+    <!-- Status TextView -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Good job! Keep it up!"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="40dp"
+        android:layout_above="@id/progressBar"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Number TextView -->
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="100"
+        android:layout_below="@id/progressBar"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+/>
+
+</RelativeLayout>

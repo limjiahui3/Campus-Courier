@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".shared.ChangeTelegramHandle">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Profile"
+        android:textColor="@color/brown"
+        android:textSize="15dp"
+        android:id="@+id/buttonBackToProfile"
+        android:background="#00FFFFFF"
+        android:paddingTop="15dp"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"/>
+
+    <!-- Change Telegram Handle Title -->
+    <TextView
+        android:id="@+id/titleChangeHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backContainer"
+        android:layout_centerHorizontal="true"
+        android:text="Change Telegram Handle"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- TextInputLayout for New Telegram Handle -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newHandleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleChangeHandle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newTelegramHandle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Telegram Handle"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button to Save New Telegram Handle -->
+    <Button
+        android:id="@+id/buttonSaveHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newHandleLayout"
+        android:layout_centerHorizontal="true"
+        android:text="Save New Handle"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

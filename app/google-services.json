@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "238936806837",
+    "project_id": "campus-courier-3b8be",
+    "storage_bucket": "campus-courier-3b8be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238936806837:android:e532a9f9339ec8b72b75fc",
+        "android_client_info": {
+          "package_name": "com.example.campuscourier"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN494apTI1AqD90aOuIWcbKAsuOV8XelA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".shared.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/courier"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/courier"
+        android:supportsRtl="true"
+        android:theme="@style/ReqAppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".supplier.HistorySupplier"
+            android:exported="false" />
+        <activity
+            android:name=".shared.FAQ_n_Rules"
+            android:exported="false" />
+        <activity
+            android:name=".shared.UpdateTelegram"
+            android:exported="false" />
+        <activity
+            android:name=".shared.Requests_2"
+            android:exported="false" />
+        <activity
+            android:name=".shared.ReportStatus"
+            android:exported="false" />
+        <activity
+            android:name=".shared.Report"
+            android:exported="false" />
+        <activity
+            android:name=".shared.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".shared.DemeritPoints"
+            android:exported="false" />
+        <activity
+            android:name=".shared.ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Admin_Home"
+            android:exported="false" />
+        <activity
+            android:name=".supplier.FindRequests"
+            android:exported="false" />
+        <activity
+            android:name=".supplier.RequestDetailsForSupplierCancel"
+            android:exported="false" />
+        <activity
+            android:name=".supplier.RequestDetailsForSupplierAccept"
+            android:exported="false" />
+        <activity
+            android:name=".supplier.HomeSupplier"
+            android:exported="true" />
+        <activity
+            android:name=".supplier.SupplierProfile"
+            android:exported="false" />
+        <activity
+            android:name=".requestor.EditRequestDetails"
+            android:exported="false" />
+        <activity
+            android:name=".requestor.Home"
+            android:exported="false" />
+        <activity
+            android:name=".requestor.RequestDetails"
+            android:exported="false" />
+        <activity
+            android:name=".requestor.AddRequest"
+            android:exported="true" />
+        <activity
+            android:name=".requestor.History"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".shared.Login"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".shared.Register"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".shared.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+    </application>
+
+</manifest>
